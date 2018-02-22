@@ -1,4 +1,4 @@
-class CodeGenerator
+class Sequence
 
   def initialize
     
