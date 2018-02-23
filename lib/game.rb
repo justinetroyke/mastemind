@@ -43,6 +43,10 @@ class Game
   end
 
   def play
+    p play_prompt
+  end
+
+  def play_prompt
     "I have generated...guess?"
   end
 end

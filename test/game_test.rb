@@ -71,7 +71,13 @@ class MastermindTest < Minitest::Test
     assert_equal "Would you like to (p)lay, read the (i)nstructions, or (q)uit?", game.prompt_response
   end
 
-  # def test
-  # end
+  def test_play_method_starts_with_play_prompt
+    game = Game.new(io:StringIO.new("p"))
+
+    assert_equal "I have generated...guess?", game.play_prompt
+  end
+
+  def test_the
+  end
 
 end
