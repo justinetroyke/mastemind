@@ -38,7 +38,7 @@ class MastermindTest < Minitest::Test
   def test_response_of_q_calls_quit_method
     game = Game.new(io:StringIO.new("q"))
 
-    assert_equal "Goodbye!!!", game.response
+    assert_equal "Goodbye!!!", game.prompt_response
   end
 
   def test_start_method_can_accept_instruction_prompt_reply
@@ -50,7 +50,7 @@ class MastermindTest < Minitest::Test
   def test_response_of_i_calls_instructions_method
     game = Game.new(io:StringIO.new("i"))
 
-    assert_equal "Get it together", game.response
+    assert_equal "Get it together", game.prompt_response
   end
 
   def test_start_method_can_accept_play_prompt_reply
@@ -62,13 +62,16 @@ class MastermindTest < Minitest::Test
   def test_response_of_p_calls_instructions_method
     game = Game.new(io:StringIO.new("p"))
 
-    assert_equal "I have generated...guess?", game.response
+    assert_equal "I have generated...guess?", game.prompt_response
   end
 
   def test_invalid_response_goes_back_to_prompt
     game = Game.new(io:StringIO.new("z"))
 
-    assert_equal "Would you like to (p)lay, read the (i)nstructions, or (q)uit?", game.response
+    assert_equal "Would you like to (p)lay, read the (i)nstructions, or (q)uit?", game.prompt_response
   end
+
+  # def test
+  # end
 
 end

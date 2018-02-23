@@ -25,16 +25,16 @@ class Game
     "Goodbye!!!"
   end
 
-  def response
-    r = io.gets.strip
-    if r == "q"
+  def prompt_response
+    response = io.gets.strip
+    if response == "q"
       quit
-    elsif r == "i"
+    elsif response == "i"
       instructions
-    elsif r == "p"
+    elsif response == "p"
       play
     else
-      prompt  
+      prompt
     end
   end
 
