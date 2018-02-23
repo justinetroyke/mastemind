@@ -1,3 +1,3 @@
-require './lib/code_generator'
+require './lib/game'
 
 @game.start

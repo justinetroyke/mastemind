@@ -1,7 +1,7 @@
 class Sequence
 
   def initialize
-    colors = ["b","g","r","y"]
-    colors.sample(4 + rand(colors.count))
+    colors = ["b","b","b","b","g","g","g","g","r","r","r","r","y","y","y","y"].sample(4)
+    colors.delete("[]")
   end
 end
