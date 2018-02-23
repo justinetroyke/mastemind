@@ -31,10 +31,18 @@ class Game
       quit
     elsif r == "i"
       instructions
+    elsif r == "p"
+      play
+    else
+      prompt  
     end
   end
 
   def instructions
     "Get it together"
+  end
+
+  def play
+    "I have generated...guess?"
   end
 end
