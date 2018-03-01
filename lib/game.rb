@@ -42,11 +42,19 @@ class Game
     "Get it together"
   end
 
-  def play
+  def play(io:"")
     p play_prompt
   end
 
   def play_prompt
     "I have generated...guess?"
   end
+
+  def play_response
+    response = io.gets.strip
+    if response == "q"
+      quit
+    end
+  end
+
 end

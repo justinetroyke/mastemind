@@ -77,7 +77,11 @@ class MastermindTest < Minitest::Test
     assert_equal "I have generated...guess?", game.play_prompt
   end
 
-  def test_the
+  def test_play_has_quit_method
+    game = Game.new
+    game.play(io:StringIO.new("q"))
+
+    assert_equal "Goodbye!!!", game.play(io:StringIO.new("q"))
   end
 
 end
